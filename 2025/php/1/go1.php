@@ -1,6 +1,6 @@
 <?php
 
- $tic = microtime(true);
+$tic = microtime(true);
 
 $f = file('input');
 
@@ -25,8 +25,8 @@ foreach ($f as $l) {
     }
 }
 
- $toc = microtime(true);
+$toc = microtime(true);
 
-echo $r . "\n";
+echo $r."\n";
 
- echo "Time: " . ($toc - $tic) . "\n";
+echo "Time: ".($toc - $tic)."\n";

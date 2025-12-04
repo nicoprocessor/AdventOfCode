@@ -1,6 +1,6 @@
 <?php
 
- $tic = microtime(true);
+$tic = microtime(true);
 
 $f = file('input');
 
@@ -14,7 +14,7 @@ foreach ($f as $l) {
 
     $p = $c;
 
-    if($i > 100) {
+    if ($i > 100) {
         $r += intdiv($i, 100);
         $i = $i % 100;
     }
@@ -22,20 +22,20 @@ foreach ($f as $l) {
     if ($s === 'R') {
         $c = ($c + $i + 100) % 100;
 
-        if($c < $p && $p !== 0 || $c === 0) {
+        if ($c < $p && $p !== 0 || $c === 0) {
             $r++;
         }
     } else {
         $c = ($c - $i + 100) % 100;
 
-        if($c > $p && $p !== 0 || $c === 0) {
+        if ($c > $p && $p !== 0 || $c === 0) {
             $r++;
         }
     }
 }
 
- $toc = microtime(true);
+$toc = microtime(true);
 
 echo $r."\n";
 
- echo "Time: " . ($toc - $tic) * 1000 . "ms\n";
+echo "Time: ".($toc - $tic) * 1000 ."ms\n";
